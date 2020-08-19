@@ -10,5 +10,9 @@ public class BankModel {
         balance = balance - amount;
     }
 
+    public int getBalance() {
+        return balance;
+    }
+
 }
 
