@@ -2,25 +2,29 @@ public class BankController {
 
     private BankView theView;
     private BankModel theModel;
-    private int amount = 0;
+    private int amount;
 
     public BankController(BankView theView, BankModel theModel) {
         this.theView = theView;
         this.theModel = theModel;
     }
 
-    public void executeDeposit() {
-        theModel.deposit(amount);
-        theView.result(theModel.getBalance());
+    public void displayResult() {
+        theView.displayResult(theModel.getBalance());
     }
 
-    public void executeWithdraw() {
+    public void executeDeposit(int amount) {
+        theModel.deposit(this.amount);
+        theView.displayResult(theModel.getBalance());
+    }
+
+    public void executeWithdraw(int amount) {
         theModel.withdraw(amount);
-        theView.result(theModel.getBalance());
+        theView.displayResult(theModel.getBalance());
     }
 
-
-//    theModel.addTwoNumbers(firstNumber, secondNumber);
-//                theView.setResultsTextField(theModel.getCalculationValue());
+    public void process() {
+        theView.menu();
+    }
 }
 

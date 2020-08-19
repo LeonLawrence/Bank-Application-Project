@@ -13,6 +13,5 @@ public class BankModel {
     public int getBalance() {
         return balance;
     }
-
 }
 
