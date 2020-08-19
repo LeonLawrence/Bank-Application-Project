@@ -5,44 +5,44 @@ public class BankView {
 
     public void menu() {
 
-        char option;
+        int option;
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("A check Balance");
-        System.out.println("B Deposit");
-        System.out.println("C Withdraw");
-        System.out.println("D Exit");
+        System.out.println("1 check Balance");
+        System.out.println("2 Deposit");
+        System.out.println("3 Withdraw");
+        System.out.println("4 Exit");
 
         do {
             System.out.println("Enter an option");
-            option = scan.next().charAt(0);
+            option = scan.nextInt();
 
             switch (option) {
-                case 'A':
+                case 1:
                     System.out.println("Balance: " );
                     bs.displayResult();
                     break;
 
-                case 'B':
+                case 2:
                     System.out.println("Enter Amount to Deposit");
                     int amount = scan.nextInt();
                     bs.executeDeposit(amount);
                     break;
 
-                case 'C':
+                case 3:
                     System.out.println("Enter Amount to Withdraw");
                     int amount2 = scan.nextInt();
                     bs.executeWithdraw(amount2);
                     break;
 
-                case 'D':
+                case 4:
                     break;
 
                 default:
                     System.out.println("Invalid Option, Please enter again");
                     break;
             }
-        } while (option != 'D');
+        } while (option != 4);
         System.out.println("Application Terminated");
     }
 

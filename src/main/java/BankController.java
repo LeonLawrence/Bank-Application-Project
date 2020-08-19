@@ -2,7 +2,7 @@ public class BankController {
 
     private BankView theView;
     private BankModel theModel;
-    private int amount;
+    private int amount = 0;
 
     public BankController(BankView theView, BankModel theModel) {
         this.theView = theView;
