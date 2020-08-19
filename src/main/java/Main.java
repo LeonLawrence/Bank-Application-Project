@@ -24,7 +24,7 @@ public class Main {
 
             switch (option) {
                 case 1:
-                    System.out.println("Balance: " );
+                    System.out.println("ACCOUNT BALANCE");
                     bs.displayResult();
                     break;
 

@@ -20,8 +20,14 @@ public class BankController {
     }
 
     public void executeWithdraw(int amount) {
-        theModel.withdraw(amount);
-        theView.displayResult(theModel.getBalance());
+        if (theModel.getBalance() - amount < 0){
+            System.out.println("NOT ENOUGH FUNDS, YOUR CURRENT ACCOUNT BALANCE IS: £" + displayResult());
+        } else if (theModel.getBalance() > 0){
+            System.out.println("WITHDRAW SUCCESSFUL");
+            theModel.withdraw(amount);
+            theView.displayResult(theModel.getBalance());
+        }
     }
 }
+
 
