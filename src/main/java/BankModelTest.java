@@ -4,7 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 public class BankModelTest {
 
-        private BankModel model = new BankModel();
+    private BankModel model = new BankModel();
 
     @Test
     public void canWithdraw() {

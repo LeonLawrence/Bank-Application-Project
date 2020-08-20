@@ -7,7 +7,7 @@ public class BankModel {
     }
 
     public void withdraw(int amount) {
-            balance = balance - amount;
+        balance = balance - amount;
     }
 
     public int getBalance() {
