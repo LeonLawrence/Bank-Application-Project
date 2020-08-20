@@ -45,7 +45,6 @@ public class Main {
 
                 default:
                     System.out.println("Invalid Option, Please enter again");
-                    break;
             }
         } while (option != 4);
         System.out.println("Application Terminated");
