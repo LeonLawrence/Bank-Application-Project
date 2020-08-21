@@ -1,15 +1,15 @@
 import javax.swing.*;
 import java.awt.event.ActionListener;
 
-class BankViewGUI extends JFrame {
+class BankViewJFrame extends JFrame {
     private JTextField inputTextField = new JTextField(10);
     private JButton depositButton = new JButton("Deposit");
     private JButton withdrawButton = new JButton("Withdraw");
-    private JLabel resultsTextField = new JLabel("***");
+    private JLabel resultsTextField = new JLabel();
 
-    public BankViewGUI() {
+    public BankViewJFrame() {
         JPanel panel = new JPanel();
-        this.setSize(400, 200);
+        this.setSize(350, 200);
 
         panel.add(depositButton);
         panel.add(withdrawButton);
@@ -23,7 +23,11 @@ class BankViewGUI extends JFrame {
     }
 
     public int getAmountTextField() {
-        return Integer.parseInt(inputTextField.getText());
+        try {
+            return Integer.parseInt(inputTextField.getText());
+        } catch (NumberFormatException e) {
+            return 0;
+        }
     }
 
     public void setResultsLabel(int solution) {

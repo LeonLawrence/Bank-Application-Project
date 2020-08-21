@@ -1,7 +1,7 @@
 public class Main {
 
     public static void main(String[] args) {
-        BankViewGUI theView = new BankViewGUI();
+        BankViewJFrame theView = new BankViewJFrame();
 
         BankModel theModel = new BankModel();
 
