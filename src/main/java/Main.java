@@ -5,7 +5,7 @@ public class Main {
 
         BankModel theModel = new BankModel();
 
-        BankControllerGUI theController = new BankControllerGUI(theView, theModel);
+        BankControllerGUI theController = new BankControllerGUI(theView, theModel, new BankListener(theView, theModel));
 
         theView.setVisible(true);
     }
